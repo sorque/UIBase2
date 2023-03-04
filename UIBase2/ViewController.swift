@@ -13,7 +13,7 @@ class ViewController: UIViewController {
         let view = UIView()
         view.backgroundColor = .systemMint
         view.layer.cornerRadius = 50
-        view.layer.borderWidth = 7
+        view.layer.borderWidth = 2
         view.layer.borderColor = UIColor.black.cgColor
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -23,14 +23,16 @@ class ViewController: UIViewController {
         let layer = CALayer()
         layer.backgroundColor = UIColor.blue.cgColor
         layer.cornerRadius = 50
-        layer.frame = CGRect(x: 80, y: 110, width: 100, height: 100)
+        layer.frame = CGRect(x: 140, y: 110, width: 100, height: 100)
         return layer
     } ()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .green
         setupUI()
+        addText()
     }
     
     func setupUI() {
@@ -45,9 +47,34 @@ class ViewController: UIViewController {
             uiView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             uiView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             uiView.heightAnchor.constraint(equalToConstant: 120),
-            uiView.widthAnchor.constraint(equalToConstant: 80)
+            uiView.widthAnchor.constraint(equalToConstant: 120)
         ])
     }
+    
+    private let someText: UITextView = {
+        let text = UITextView()
+        text.textColor = .systemPurple
+        text.backgroundColor = .systemGreen
+        text.text = ("hello it's me")
+        text.translatesAutoresizingMaskIntoConstraints = false
+        return text
+    } ()
+    
+    func addText() {
+        view.addSubview(someText)
+        
+        NSLayoutConstraint.activate([
+            someText.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            someText.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            someText.heightAnchor.constraint(equalToConstant: 40),
+            someText.widthAnchor.constraint(equalToConstant: 120),
+            
+        ])
+    }
+ 
+
+    
+    
     
     
 
