@@ -50,27 +50,50 @@ class ViewController: UIViewController {
             uiView.widthAnchor.constraint(equalToConstant: 120)
         ])
     }
+
+//    private let someText: UITextView = {
+//        let text = UITextView()
+//        text.textColor = .systemPurple
+//        text.backgroundColor = .systemGreen
+//        text.text = ("hello it's me")
+//        text.translatesAutoresizingMaskIntoConstraints = false
+//        return text
+//    } ()
+//
+//    func addText() {
+//        view.addSubview(someText)
+//
+//        NSLayoutConstraint.activate([
+//            someText.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+//            someText.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+//            someText.heightAnchor.constraint(equalToConstant: 40),
+//            someText.widthAnchor.constraint(equalToConstant: 120),
+//
+//        ])
+//    }
     
-    private let someText: UITextView = {
-        let text = UITextView()
-        text.textColor = .systemPurple
-        text.backgroundColor = .systemGreen
-        text.text = ("hello it's me")
-        text.translatesAutoresizingMaskIntoConstraints = false
-        return text
+    private let someTextField: UITextField = {
+        let textNew = UITextField()
+        textNew.textColor = .systemPurple
+        textNew.backgroundColor = .systemGreen
+        textNew.text = ("hello it's me")
+        textNew.translatesAutoresizingMaskIntoConstraints = false
+        textNew.isEnabled = false
+        return textNew
     } ()
-    
+
     func addText() {
-        view.addSubview(someText)
-        
+        view.addSubview(someTextField)
+
         NSLayoutConstraint.activate([
-            someText.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            someText.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            someText.heightAnchor.constraint(equalToConstant: 40),
-            someText.widthAnchor.constraint(equalToConstant: 120),
-            
+            someTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            someTextField.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            someTextField.heightAnchor.constraint(equalToConstant: 40),
+            someTextField.widthAnchor.constraint(equalToConstant: 120),
+
         ])
     }
+
  
 
     
