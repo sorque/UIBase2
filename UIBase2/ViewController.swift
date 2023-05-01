@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     private let uiView: UIView = {
         let view = UIView()
         view.backgroundColor = .systemCyan
-        view.layer.cornerRadius = 55
+        view.layer.cornerRadius = 52
         view.layer.borderWidth = 2
         view.layer.borderColor = UIColor.black.cgColor
         view.translatesAutoresizingMaskIntoConstraints = false
