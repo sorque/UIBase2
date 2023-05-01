@@ -11,7 +11,7 @@ class ViewController: UIViewController {
     
     private let uiView: UIView = {
         let view = UIView()
-        view.backgroundColor = .systemMint
+        view.backgroundColor = .systemCyan
         view.layer.cornerRadius = 50
         view.layer.borderWidth = 2
         view.layer.borderColor = UIColor.black.cgColor
